@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api name="1s-mock" context="/1s" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/pos/{code}">
+        <inSequence>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="before payload initialisation">
+                <message>before payload initialisation code:${params.pathParams.code}</message>
+            </log>
+            <payloadFactory description="Returns POS data using POS code" media-type="json" template-type="default">
+                <format>{
+                    "kod_magazina": "800662",
+                    "naimenovanie": "Борино",
+                    "format": "ММ",
+                    "naimenovanie_regiona": "Владимирская Область",
+                    "raion_okrug": "Александровский",
+                    "gorod": "Александров",
+                    "adres": "Ленина 8",
+                    "typ_otkrytia": "Аренда",
+                    "etajnost": "1 этаж",
+                    "filial": "Владимир",
+                    "okrug": "Московский округ",
+                    "subformat": "Дискаунтер"
+                    }</format>
+            </payloadFactory>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="after payload initialisation">
+                <message>after payload initialisation</message>
+            </log>
+            <respond description="final responder"/>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

@@ -1,0 +1,15 @@
+<datasource>
+    <name>bdsmds</name>
+    <description>BD SM Moulage</description>
+    <jndiConfig useDataSourceFactory="false">
+        <name>bdsmdsjndi</name>
+    </jndiConfig>
+    <definition type="RDBMS">
+        <configuration>
+            <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+            <url>jdbc:mysql://10.234.12.28:8083/mysql</url>
+            <username>root</username>
+            <password>root</password>
+        </configuration>
+    </definition>
+</datasource>

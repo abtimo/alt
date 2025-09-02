@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: diff-mdm-sys
+  description: API Definition of diff-mdm-sys
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/diff-mdm-sys
+paths:
+  /mdm/get-tt:
+    get:
+      responses:
+        default:
+          description: Default response

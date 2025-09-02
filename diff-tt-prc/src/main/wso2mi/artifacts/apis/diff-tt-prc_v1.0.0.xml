@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse" name="diff-tt-prc" context="/default" version="1.0.0" version-type="context" publishSwagger="gov:mi-resources/api-definitions/diff-tt-prc.yaml">
+    <resource methods="POST" url-mapping="/tt-check">
+        <inSequence><!--This is generated API skeleton.--><!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"Response" : "Sample Response"}</format>
+                <args/>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/tt-cbo-compare">
+        <inSequence>
+            <property name="guid" expression="json-eval($.guid)" scope="default" type="STRING"/>
+            <property name="objectType" expression="json-eval($.objectType)" scope="default" type="STRING"/>
+            <http.get configKey="diff-kis1s-sys">
+                <relativePath>/get-tt/555</relativePath>
+                <headers>[]</headers>
+                <forceScAccepted>false</forceScAccepted>
+                <disableChunking>false</disableChunking>
+                <forceHttp10>false</forceHttp10>
+                <noKeepAlive>false</noKeepAlive>
+                <responseVariable>http_get_2</responseVariable>
+                <overwriteBody>false</overwriteBody>
+            </http.get>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="after first call ">
+                <message>after first call:
+                    ${vars.http_get_2}</message>
+            </log>
+            <http.get configKey="diff-kis1s-sys">
+                <relativePath>/get-tt/666</relativePath>
+                <headers>[]</headers>
+                <forceScAccepted>false</forceScAccepted>
+                <disableChunking>false</disableChunking>
+                <forceHttp10>false</forceHttp10>
+                <noKeepAlive>false</noKeepAlive>
+                <responseVariable>http_get_3</responseVariable>
+                <overwriteBody>false</overwriteBody>
+            </http.get>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="after second call ">
+                <message>after second call: ${vars.http_get_3}</message>
+            </log>
+            <http.get configKey="diff-kis1s-sys">
+                <relativePath>/get-tt/777</relativePath>
+                <headers>[]</headers>
+                <forceScAccepted>false</forceScAccepted>
+                <disableChunking>false</disableChunking>
+                <forceHttp10>false</forceHttp10>
+                <noKeepAlive>false</noKeepAlive>
+                <responseVariable>http_get_4</responseVariable>
+                <overwriteBody>true</overwriteBody>
+            </http.get>
+
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="after third call ">
+                <message>after third call : ${vars.http_get_4}</message>
+            </log>
+            <respond description="return call "/>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

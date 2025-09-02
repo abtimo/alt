@@ -1,0 +1,10 @@
+---
+key: "mdm-pos-1.0.0"
+name : "mdm-pos"
+displayName : "mdm-pos"
+description: "mdm-pos"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/utils"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false

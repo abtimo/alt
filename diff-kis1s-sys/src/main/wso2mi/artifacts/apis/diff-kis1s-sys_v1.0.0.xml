@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api name="diff-kis1s-sys" statistics="enable" trace="enable" context="/diff-kis1s-sys" version="1.0.0" version-type="context" xmlns="http://ws.apache.org/ns/synapse">
+
+    
+
+    <resource methods="GET" uri-template="/1c/get-tt/{code}">
+  <inSequence>
+            <log category="INFO" logMessageID="true" logFullPayload="true">
+                <message>lalala</message>
+            </log>
+
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="begin diff kis1s sys">
+                <message>begin diff kis1s sys</message>
+            </log>
+            <http.get configKey="1s-backend-connection">
+                <relativePath>/111</relativePath>
+                <headers>[]</headers>
+                <forceScAccepted>false</forceScAccepted>
+                <disableChunking>false</disableChunking>
+                <forceHttp10>false</forceHttp10>
+                <noKeepAlive>false</noKeepAlive>
+                <responseVariable>http_get_1</responseVariable>
+                <overwriteBody>true</overwriteBody>
+            </http.get>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="after get 1s backend">
+                <message>after get 1s backend thevar: ${vars.http_get_1}</message>
+            </log><!--This is generated API skeleton.--><!--Business Logic Goes Here-->
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="Before return diff kis1s sys">
+                <message>Before return diff kis1s sys</message>
+            </log>
+
+            <respond/>
+        </inSequence>
+        <faultSequence/>
+    </resource>
+</api>

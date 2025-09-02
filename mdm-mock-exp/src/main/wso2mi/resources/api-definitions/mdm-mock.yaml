@@ -1,0 +1,38 @@
+openapi: 3.0.1
+info:
+  title: mdm-mock
+  description: API Definition of mdm-mock
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/utils
+paths:
+  /invoker.jsp:
+    get:
+      parameters:
+      - name: script
+        in: query
+        schema:
+          type: string
+      - name: companycode
+        in: query
+        schema:
+          type: string
+      - name: invokinguser
+        in: query
+        schema:
+          type: string
+      - name: containerName
+        in: query
+        schema:
+          type: string
+      - name: searchPath
+        in: query
+        schema:
+          type: string
+      - name: searchValue
+        in: query
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response

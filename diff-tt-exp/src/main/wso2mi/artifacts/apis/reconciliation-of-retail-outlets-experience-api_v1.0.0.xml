@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse" name="reconciliation-of-retail-outlets-experience-api" context="/default" version="1.0.0" version-type="context" publishSwagger="gov:mi-resources/api-definitions/reconciliation-of-retail-outlets-experience-api.yaml">
+    <resource methods="POST" url-mapping="/tt-check">
+        <inSequence><!--This is generated API skeleton.--><!--Business Logic Goes Here-->
+            <payloadFactory media-type="json">
+                <format>{"Response" : "Sample Response"}</format>
+                <args/>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/pos-diff-check/{code}">
+        <inSequence>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

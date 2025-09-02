@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api name="mdm-mock" statistics="enable" trace="enable" context="/utils" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/invoker.jsp?script={script}&amp;companycode={companycode}&amp;invokinguser={invokinguser}&amp;containerName={containerName}&amp;searchPath={searchPath}&amp;searchValue={searchValue}">
+        <inSequence>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="begin mdm mock exp">
+                <message>begin mdm mock exp ${params.queryParams.script} ${params.queryParams.companycode} ${params.queryParams.invokinguser} ${params.queryParams.containerName} ${params.queryParams.searchPath} ${params.queryParams.searchValue}</message>
+            </log>
+            <payloadFactory description="set mock payload" media-type="json" template-type="default">
+                <format>{
+                    "type": "ITEM",
+                    "identifier": 44673662,
+                    "primaryKey": "254563",
+                    "displayName": "Борино Владимирская обл, Александровский р-н, Александров г",
+                    "companyName": "tander",
+                    "containerName": "Подразделения",
+                    "dataCompletenessPercent": [],
+                    "validationErrorCount": 0,
+                    "lastModifiedOn": "2025-06-27T13:29:25+0400",
+                    "lastModifiedBy": "esb",
+                    "versionNumber": 25,
+                    "attributes": {
+                    "SpcCtg_Divisions": {
+                    "DivnameAndAddress": "Борино Владимирская обл, Александровский р-н, Александров г",
+                    "NetworkName": null,
+                    "EmailToTS": "false",
+                    "Address": "Владимирская обл, Александровский р-н, Александров г",
+                    "AjacentArea": null,
+                    "Diskaunter": "false",
+                    "MercuryNostock": null,
+                    "NearRival": null,
+                    "Potential": null,
+                    "CloseDate": null,
+                    "RightTypeDate": null,
+                    "Addresses": [
+                    {
+                    "Building": null,
+                    "Settlement": null,
+                    "AdditionalInfo": null,
+                    "PostalCode": null,
+                    "Country": null,
+                    "Region": "Владимирская обл",
+                    "Street": null,
+                    "House": null,
+                    "City": "Александров г",
+                    "AddressType": "LkpTbl_AddressType»Юридический»",
+                    "District": "Александровский р-н",
+                    "Room": null
+                    },
+                    {
+                    "Building": null,
+                    "Settlement": null,
+                    "AdditionalInfo": null,
+                    "PostalCode": null,
+                    "Country": null,
+                    "Region": "Владимирская обл",
+                    "Street": null,
+                    "House": null,
+                    "City": "Александров г",
+                    "AddressType": "LkpTbl_AddressType»Фактический»",
+                    "District": "Александровский р-н",
+                    "Room": null
+                    }
+                    ],
+                    "OrgUniqID": "7eb12aa8-38a3-11d9-b338-0030482156e1",
+                    "EmailDop": null,
+                    "Matrix": {
+                    "MatrixCool": null,
+                    "MatrixCandy": null,
+                    "MatrixPerish": null,
+                    "MatrixMKBeauty": null,
+                    "MatrixAlcohol": null,
+                    "MatrixDry": null,
+                    "MatrixMKNeprofil": null,
+                    "MatrixMKNeed": null,
+                    "MatrixFreeze": null
+                    },
+                    "HasTrailerParking": "false",
+                    "Sections": [
+                    {
+                    "SectionOpenDate": null,
+                    "SectionCloseDate": null,
+                    "Section": "LkpTbl_ShopSection»Гриль и выпечка»"
+                    },
+                    {
+                    "SectionOpenDate": null,
+                    "SectionCloseDate": null,
+                    "Section": "LkpTbl_ShopSection»Нарезка»"
+                    }
+                    ],
+                    "TransitRC": null,
+                    "RelatedDivisionMK": null,
+                    "SubjectOfRegion": "Владимирская область",
+                    "Network": "false",
+                    "PotentialDiscovery": 4967000,
+                    "ContactInfo": [],
+                    "Status": null,
+                    "LastDateDRMM": null,
+                    "MDShifr": null,
+                    "EDIprefixesRC": null,
+                    "Square": {
+                    "SquareCalc": {
+                    "SquareCalcRent": null,
+                    "SquareCalcDoc": null,
+                    "SquareCalcDate": "2025-04-03T05:51:52+0400",
+                    "SquareCalcDocType": "LkpTbl_ShopSquareCalcDoc»Планограмма»",
+                    "SquareCalcOther": null,
+                    "SquareCalcComm": null,
+                    "SquareCalcWarehouse": null,
+                    "SquareCalcTotal": 225.9,
+                    "SquareCalcTrade": 190.78
+                    },
+                    "SquareInv": []
+                    },
+                    "MappedCategories": [
+                    "Классификатор Подразделений",
+                    "Классификатор корпоративных регионов",
+                    "Классификатор регионов РФ",
+                    "Классификатор населенных пунктов",
+                    "Классификатор ОКАТО",
+                    "Классификатор Населенных Пунктов Стран Мира",
+                    "Классификатор Локаций",
+                    "Классификатор ОКТМО",
+                    "Классификатор Форматов Магазинов"
+                    ],
+                    "Code": "800662",
+                    "Longitude": null,
+                    "SEC": "false",
+                    "MatrixType": null,
+                    "FullDivisionName": "Обособленное подразделение АО \"Тандер\" м-н \"Магнит\"",
+                    "TelFax": [],
+                    "FlagConversionSAP": "false",
+                    "Actual": "true",
+                    "TabakSale": null,
+                    "Building": [],
+                    "Organization": "Организации»4563»Тандер АО",
+                    "Latitude_s": null,
+                    "CityType": null,
+                    "DeliveryAddress": "Владимирская обл, Александровский р-н, Александров г",
+                    "TradingFloorStoreys": "LkpTbl_QuantityFloors»1 этаж»",
+                    "ActionRackAmount": null,
+                    "CFO": [
+                    {
+                    "CFORelationship": "ЦФО»206166»Борино",
+                    "GuidFormat": "4295d93b-025e-4e80-bdf4-05bebae52085",
+                    "Period": "2025-03-01T00:00:00+0400",
+                    "FormatName": "Дискаунтер",
+                    "Actual": "false",
+                    "CFOUniqID": "60070071-0f94-11f0-ab5a-e4434b75cfdc"
+                    }
+                    ],
+                    "DateConversionSAP": null,
+                    "FiasAddress": "Владимирская обл, Александровский р-н, Александров г",
+                    "WorkTimeEnd": null,
+                    "StatusDRMM": null,
+                    "RobotEmail": null,
+                    "HasSlot": "false",
+                    "AccountingObject": [],
+                    "PostOfficeID": null,
+                    "AlcoRackLength": null,
+                    "AlcStorage": null,
+                    "NumberOfFriges": null,
+                    "ManualTypeRight": "false",
+                    "TradingFloorArea": null,
+                    "WorkTime": null,
+                    "VegetablesRackLength": null,
+                    "AddGLN": null,
+                    "HasTransferPlatform": "false",
+                    "KppPeriods": [],
+                    "Longitude_s": null,
+                    "DistributionCenter": [],
+                    "ManualMapToOKTMO": "false",
+                    "EntryCreationDate": "2025-04-02T13:25:31+0400",
+                    "ClassNeprofil": null,
+                    "OpenDate": null,
+                    "CodeGLN": null,
+                    "Licenses": [],
+                    "ShortName": null,
+                    "KPP": null,
+                    "PalletLoadTime": null,
+                    "Latitude": null,
+                    "SeparateWarehouse": null,
+                    "ClassifierShop": null,
+                    "NumberOfRegisters": 1,
+                    "Conditions": [
+                    {
+                    "ConditionReasonTempClose": null,
+                    "ConditionReason": null,
+                    "ConditionDateEnd": null,
+                    "PairedCondition": "false",
+                    "ConditionID": null,
+                    "ConditionName": "1.1.4. Проект прекращен",
+                    "AssociatedID": null,
+                    "ConditionDateStart": "2025-06-05T00:00:00+0400",
+                    "ConditionProjectTempClose": null
+                    }
+                    ],
+                    "OKONH": "71200",
+                    "DateRepaymentRent": null,
+                    "RelatedDivision": null,
+                    "ApprovedOperationalCapacity": 4000000,
+                    "EntryLastModDate": "2025-06-27T13:28:29+0400",
+                    "NumberRackAtRegisters": null,
+                    "ImportProcessed": null,
+                    "ArrivalPeriods": null,
+                    "FrigesRackLength": null,
+                    "Contractors": {
+                    "ContractorName": "Борино",
+                    "ContractorFullName": "АО \"Тандер\" м-н Борино",
+                    "ContractorCode": "800662",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc",
+                    "ContractorParent": "1e32621e-55ad-11dc-adeb-00093d12899d"
+                    },
+                    "RentArea": null,
+                    "DivisionID": "254563",
+                    "FamilyCount": null,
+                    "BuildingArea": null,
+                    "NonPersistentAttribute": null,
+                    "PermittedRangeClass": null,
+                    "FullOrgName": null,
+                    "RightType": "LkpTbl_ShopRightType»Арендован»",
+                    "User": "esb",
+                    "Parent": "71c65479-92f8-11da-bf9f-001111db0d54",
+                    "CategoryKIS": null,
+                    "DivisionUniqID": "44f910cc-0727-4a52-a0b7-8a6c2aa1421e",
+                    "newDivision": null,
+                    "MatrixDry": null,
+                    "EntranceFloor": "LkpTbl_EntranceFloor»1 этаж»",
+                    "PotentialClient": null,
+                    "NearSelf": null,
+                    "TotalArea": null,
+                    "CodeKIS": "GKC-800662 ",
+                    "Format": "LkpTbl_Format»Дискаунтер»",
+                    "CityBudget": null,
+                    "VisitQuantity": null,
+                    "NumberStoreys": "LkpTbl_QuantityFloors»1 этаж»",
+                    "IsBlocked": "false",
+                    "JuridicalCloseDate": null,
+                    "JuridicalOpenDate": null,
+                    "DivisionName": "Борино",
+                    "FormatOfStore": "Дискаунтер",
+                    "Comments": {},
+                    "MDLP_Code": null,
+                    "StyleDiscovery": "LkpTbl_OpeningType»Аренда»",
+                    "PositiveRackAmount": null,
+                    "Warehouses": [
+                    {
+                    "WarehouseParent": "41557bd1-0847-11dc-87f9-00093d12899d",
+                    "WarehousePeriod": "2025-03-01T00:00:00+0400",
+                    "WarehouseUniqID": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseChilds": [
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc2-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Отборка ИМ",
+                    "WarehouseCode": "800662OTB",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc0-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "НМЦ",
+                    "WarehouseCode": "800662EQOB",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc4-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Склад временного хранения",
+                    "WarehouseCode": "800662SVH",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc8-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Торговый зал",
+                    "WarehouseCode": "800662TOR",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc1-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "НМЦ в пути",
+                    "WarehouseCode": "800662WAYO",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc5-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Склад ответственного хранения",
+                    "WarehouseCode": "800662SOH",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc3-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Склад брака НМЦ",
+                    "WarehouseCode": "800662EQBR",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fbf-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Курьер доставка",
+                    "WarehouseCode": "800662KUR",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc6-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Товар в пути",
+                    "WarehouseCode": "800662WAY",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    },
+                    {
+                    "WarehouseParent": "765923ae-0f94-11f0-ab5a-e4434b75cfdc",
+                    "WarehousePeriod": null,
+                    "WarehouseUniqID": "9ca71fc7-0f95-11f0-ab5a-e4434b75cfdc",
+                    "WarehouseName": "Товар не готов к продаже",
+                    "WarehouseCode": "800662TNGP",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    }
+                    ],
+                    "WarehouseName": "Борино",
+                    "WarehouseCode": "800662",
+                    "ContractorUniqID": "6f0bd6b6-0f94-11f0-ab5a-e4434b75cfdc"
+                    }
+                    ],
+                    "HasInterimReload": "false",
+                    "ManualKNPSM": "false"
+                    },
+                    "SpcSec_Divisions_DD": {
+                    "ClassNeprofil": null,
+                    "Address": null,
+                    "CityType": null,
+                    "OpenDate": null,
+                    "DeliveryAddress": null,
+                    "NearRival": null,
+                    "ConditionsForView": [],
+                    "NumberOfRegisters": null,
+                    "CloseDate": null,
+                    "PotentialClient": null,
+                    "NearSelf": null,
+                    "SquareCalc": {},
+                    "WorkTimeEnd": null,
+                    "Format": null,
+                    "Matrix": {
+                    "MatrixMKBeauty": null,
+                    "MatrixDry": null,
+                    "MatrixMKNeprofil": null,
+                    "MatrixMKNeed": null
+                    },
+                    "RelatedDivision": null,
+                    "SubjectOfRegion": null,
+                    "RobotEmail": null,
+                    "PotentialDiscovery": null,
+                    "NumberStoreys": null,
+                    "ContactInfo": [],
+                    "NumberRackAtRegisters": null,
+                    "DivisionName": null,
+                    "FormatOfStore": null,
+                    "Comments": [],
+                    "Code": null,
+                    "ConditionsForEdit": [],
+                    "FamilyCount": null,
+                    "WorkTime": null,
+                    "TelFax": [],
+                    "RightType": null
+                    },
+                    "SpcSec_TradeOfLicenses": {
+                    "AddExciseGLN": null,
+                    "AddressAlcStorage": null,
+                    "KppAlcStorage": null,
+                    "DateWait": null,
+                    "CodeExciseGLN": null
+                    },
+                    "SpcSec_SaleBan": {
+                    "SalesBan": [
+                    {
+                    "TypeOfBan": "LkpTbl_TypeOfBan»Запрет отгрузки лицензированного алкоголя»",
+                    "ReasonOfBan": "Автоматическая установка по причине создания нового ПО",
+                    "DateEndBan": null,
+                    "DateStartBan": "2025-04-02T00:00:00+0400"
+                    }
+                    ]
+                    },
+                    "SpcSec_Divisions_DPMM": {
+                    "DivisionName": null,
+                    "FormatOfStore": null,
+                    "Address": null,
+                    "Comments": [],
+                    "DeliveryAddress": null,
+                    "NearRival": null,
+                    "ConditionsForView": [],
+                    "Code": null,
+                    "NumberOfRegisters": null,
+                    "ConditionsForEdit": [],
+                    "WorkTime": null,
+                    "PotentialClient": null,
+                    "FamilyCount": null,
+                    "NearSelf": null,
+                    "SquareCalc": {},
+                    "WorkTimeEnd": null,
+                    "Format": null,
+                    "Matrix": {
+                    "MatrixPerish": null,
+                    "MatrixAlcohol": null,
+                    "MatrixDry": null
+                    },
+                    "CityBudget": null,
+                    "SubjectOfRegion": null,
+                    "TabakSale": null,
+                    "NumberRackAtRegisters": null
+                    },
+                    "SpcSec_DateOpen": {
+                    "DatePlanOpen": null,
+                    "DateOpen": null
+                    },
+                    "SpcSec_Divisions_DRMM": {
+                    "LastDateDRMM": null,
+                    "DivisionName": null,
+                    "Address": null,
+                    "Comments": {},
+                    "DeliveryAddress": null,
+                    "ManualTypeRight": "false",
+                    "ConditionsForView": [],
+                    "Code": null,
+                    "ConditionsForEdit": [],
+                    "RightTypeDate": null,
+                    "Format": null,
+                    "StyleDiscovery": null,
+                    "CityBudget": null,
+                    "SubjectOfRegion": null,
+                    "PotentialDiscovery": null,
+                    "RightType": null
+                    },
+                    "SpcSec_HelpDesk": {
+                    "Intercity": {},
+                    "AcceptanceReport": "false",
+                    "DeskNumber": null,
+                    "Address": null,
+                    "GUID_FederalDistrict": null,
+                    "OpenDate": null,
+                    "DirectorHardWare": {},
+                    "DBHardWare": {},
+                    "Printer": null,
+                    "CloseDate": null,
+                    "ScalePackersMuster": [],
+                    "ScalePackersMaintanence": [],
+                    "CashHardWare": [],
+                    "CashRegisters": [],
+                    "Phone": [],
+                    "GSMGate": {},
+                    "RobotEmail": null,
+                    "GUID_RegionCompany": null,
+                    "SystemEngeneer": null,
+                    "ServerHardWare": {},
+                    "IsBlocked": "false",
+                    "DivisionName": null,
+                    "PBX": {},
+                    "ConfigVersion": {},
+                    "WiFiHardWare": [],
+                    "KKM": [],
+                    "DivisionID": null,
+                    "Code": null,
+                    "WorkTime": null,
+                    "EmailOTRS": null,
+                    "Note": null,
+                    "ServiceCenterDistance": null,
+                    "FullDivisionName": null,
+                    "IPTelephony": [],
+                    "Internet": []
+                    },
+                    "SpcSec_HelpDesk_MM": {
+                    "DirectorHardWare": [],
+                    "WiFiHardWare": {},
+                    "Printer": {},
+                    "ServerHardWare": {},
+                    "CashHardWare": []
+                    },
+                    "SpcSec_SquareCalc": {
+                    "SquareCalc": {
+                    "SquareCalcABH": null,
+                    "SquareCalcDocType": "LkpTbl_ShopSquareCalcDoc»Планограмма»",
+                    "SquareCalcOffice": null,
+                    "SquareCalcInternalParking": null,
+                    "SquareCalcComm": null,
+                    "SquareCalcLandPlot": null,
+                    "SquareCalcWarehouse": null,
+                    "SquareCalcRent": null,
+                    "SquareCalcExternalParking": null,
+                    "SquareCalcDoc": null,
+                    "SquareCalcDate": "2025-06-27T13:28:29+0400",
+                    "SquareCalcImprovement": null,
+                    "SquareCalcOther": null,
+                    "SquareCalcBuildings": null,
+                    "SquareCalcTotal": 225.9,
+                    "SquareCalcTrade": 190.78
+                    }
+                    },
+                    "SpcSec_DivisionsViewDUR": {
+                    "DivisionName": null,
+                    "Address": null,
+                    "SubjectOfRegion": null,
+                    "Code": null
+                    }
+                    },
+                    "mappings": {
+                    "Классификатор Подразделений": [
+                    "0b73499e-66b9-4a8b-bba1-77138266d963"
+                    ],
+                    "Классификатор корпоративных регионов": [
+                    "71f9390e-d27b-405d-b938-47765b1a68a6"
+                    ],
+                    "Классификатор регионов РФ": [
+                    "5c4afb4d-2927-44d6-a705-d8d158ce8f37"
+                    ],
+                    "Классификатор населенных пунктов": [
+                    "741a5e62-68d9-4f2b-bb38-20a4bdc36834"
+                    ],
+                    "Классификатор ОКАТО": [
+                    "4358"
+                    ],
+                    "Классификатор Населенных Пунктов Стран Мира": [
+                    "141126"
+                    ],
+                    "Классификатор Локаций": [
+                    "e256e6dd-34eb-4961-858b-8947a51af765"
+                    ],
+                    "Классификатор ОКТМО": [
+                    "83da880b-33f7-40ca-93eb-3d0c0b85614b"
+                    ],
+                    "Классификатор Форматов Магазинов": [
+                    "Дискаунтер"
+                    ]
+                    }
+                    }</format>
+            </payloadFactory>
+            <respond description="mdm mock exp response"/>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

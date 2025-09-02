@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api name="diff-bdsm-sys" statistics="enable" trace="enable" context="/bdsm" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/pos/{code}">
+        <inSequence>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="begin diff bdsm sys">
+                <message>begin diff bdsm sys code: ${params.pathParams.code}</message>
+            </log>
+            <dblookup description="db-lookup-mediator-0">
+                <connection>
+                    <pool>
+                        <driver>com.mysql.cj.jdbc.Driver</driver>
+                        <url>jdbc:mysql://10.234.12.28:8083/mysql</url>
+                        <user>root</user>
+                        <password>pwd</password>
+                        <property name="validationquery" value=""/>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[select * from whs.contractor where id_contr = 1]]></sql>
+                    <result column="1" name="id_contr"/>
+                    <result column="2" name="the_name"/>
+                </statement>
+            </dblookup>
+
+            <log level="custom">
+                 <property expression="get-property('id_contr')" name="Value"/>
+            </log>
+
+                        <log level="custom">
+                 <property expression="get-property('the_name')" name="Value"/>
+            </log>
+            <log category="INFO" logMessageID="true" logFullPayload="true">
+                <message>after db lookup 0 $id_contr $the_name </message>
+            </log>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

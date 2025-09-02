@@ -1,0 +1,10 @@
+---
+key: "diff-tt-prc-1.0.0"
+name : "diff-tt-prc"
+displayName : "diff-tt-prc"
+description: "diff-tt-prc"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/diff-tt-prc"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false

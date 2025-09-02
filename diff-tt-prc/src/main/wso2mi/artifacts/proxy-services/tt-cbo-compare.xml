@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="tt-cbo-compare" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <property name="guid" expression="json-eval($.guid)" scope="default" type="STRING"/>
+            <property name="objectType" expression="json-eval($.objectType)" scope="default" type="STRING"/>
+            <call>
+                <endpoint>
+                    <address uri="http://localhost:8081/1c/get-tt"/>
+                </endpoint>
+            </call>
+            <call>
+                <endpoint>
+                    <address uri="http://localhost:8082/mdm/get-tt"/>
+                </endpoint>
+            </call>
+            <call>
+                <endpoint>
+                    <address uri="http://localhost:8083/oracle/get-tt"/>
+                </endpoint>
+            </call>
+            <respond/>
+        </inSequence>
+    </target>
+</proxy>

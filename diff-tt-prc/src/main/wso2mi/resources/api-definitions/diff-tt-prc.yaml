@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: diff-tt-prc
+  description: API Definition of diff-tt-prc
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/diff-tt-prc
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response

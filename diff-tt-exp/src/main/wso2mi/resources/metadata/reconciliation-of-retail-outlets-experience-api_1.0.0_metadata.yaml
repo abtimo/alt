@@ -1,0 +1,10 @@
+---
+key: "reconciliation-of-retail-outlets-experience-api-1.0.0"
+name : "reconciliation-of-retail-outlets-experience-api"
+displayName : "reconciliation-of-retail-outlets-experience-api"
+description: "reconciliation-of-retail-outlets-experience-api"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/default"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false

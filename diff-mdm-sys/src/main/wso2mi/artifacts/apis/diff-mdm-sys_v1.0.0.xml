@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api name="diff-mdm-sys" context="/diff-mdm-sys" version="1.0.0" version-type="context" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" url-mapping="/mdm/get-tt">
+        <inSequence>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="diff mdm sys begins">
+                <message>diff mdm sys begins</message>
+            </log>
+            <http.get configKey="2mdmbackend">
+                <relativePath><![CDATA[/invoker.jsp?script=1&amp;companycode=2&amp;invokinguser=3&amp;containerName=4&amp;searchPath=5&amp;searchValue=6' ]]></relativePath>
+                <headers>[]</headers>
+                <forceScAccepted>false</forceScAccepted>
+                <disableChunking>false</disableChunking>
+                <forceHttp10>false</forceHttp10>
+                <noKeepAlive>false</noKeepAlive>
+                <responseVariable>http_get_1</responseVariable>
+                <overwriteBody>true</overwriteBody>
+            </http.get>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="after get">
+                <message>after get${vars.http_get_1vars.http_get_1.attributesvars.http_get_1.attributes.statusCodevars.http_get_1.headers}</message>
+            </log><!--This is generated API skeleton.--><!--Business Logic Goes Here-->
+            <respond/>
+        </inSequence>
+        <faultSequence/>
+    </resource>
+</api>

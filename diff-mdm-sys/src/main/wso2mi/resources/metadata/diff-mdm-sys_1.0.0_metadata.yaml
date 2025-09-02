@@ -1,0 +1,10 @@
+---
+key: "diff-mdm-sys-1.0.0"
+name : "diff-mdm-sys"
+displayName : "diff-mdm-sys"
+description: "diff-mdm-sys"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/default"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false

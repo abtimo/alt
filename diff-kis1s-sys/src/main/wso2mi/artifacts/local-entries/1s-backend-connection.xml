@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="1s-backend-connection" xmlns="http://ws.apache.org/ns/synapse">
+  <http.init>
+    <connectionType>HTTP</connectionType>
+    <baseUrl>http://localhost:8290/1s/pos</baseUrl>
+    <authType>None</authType>
+    <timeoutAction>Never</timeoutAction>
+    <retryCount>0</retryCount>
+    <retryDelay>0</retryDelay>
+    <suspendInitialDuration>-1</suspendInitialDuration>
+    <suspendProgressionFactor>1</suspendProgressionFactor>
+    <name>1s-backend-connection</name>
+  </http.init>
+</localEntry>
