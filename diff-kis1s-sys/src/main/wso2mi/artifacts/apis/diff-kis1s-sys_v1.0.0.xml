@@ -12,16 +12,20 @@
             <log category="INFO" logMessageID="true" logFullPayload="true" description="begin diff kis1s sys">
                 <message>begin diff kis1s sys</message>
             </log>
-            <http.get configKey="1s-backend-connection">
+            <http.get configKey="1s-backend-connection-https">
                 <relativePath>/111</relativePath>
-                <headers>[]</headers>
+                <headers>[{"Authorization":"Bearer eyJ4NXQiOiJNV1V4WW1Oa1pXSXdZVFEyTkRjeU1UVXdZelUxTlRReVlUbGpZekF5WmpNNU5EZ3haVFZrWkRGbE5tVmhORGt6WXpneVlqQXlNMk5pWlRBellqUTBZdyIsImtpZCI6Ik1XVXhZbU5rWldJd1lUUTJORGN5TVRVd1l6VTFOVFF5WVRsall6QXlaak01TkRneFpUVmtaREZsTm1WaE5Ea3pZemd5WWpBeU0yTmlaVEF6WWpRMFl3X1JTMjU2IiwidHlwIjoiYXQrand0IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIxMTdiMGViYy0xYzkwLTQxMDItYmY0OS0zODY1OGQ1Zjg1OTciLCJhdXQiOiJBUFBMSUNBVElPTl9VU0VSIiwiYXVkIjoiMmMwMFU2OEpISEVodG53MFR5ZnpzY2sxTFVVYSIsIm5iZiI6MTc1NzI0OTQ0NywiYXpwIjoiMmMwMFU2OEpISEVodG53MFR5ZnpzY2sxTFVVYSIsInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0Ojk0NDMvb2F1dGgyL3Rva2VuIiwiZXhwIjoxNzU3MjUzMDQ3LCJpYXQiOjE3NTcyNDk0NDcsImp0aSI6ImE2ZWJkNDg0LTY2NGQtNDE5Mi05YmEzLWI3NzExNGE0MGQ1OCIsImNsaWVudF9pZCI6IjJjMDBVNjhKSEhFaHRudzBUeWZ6c2NrMUxVVWEifQ.KHYvWnQeC0y7xgfIUKfvsjybkQGjazx1w8ypmWurdyFnFqf3GcYbFdupWZfiHIs5YCsRFw7oCUF6z1vYA38wLQRUqIqlvvn0MZYXkcvXnR20U-BJUQKLH8EANnQ4-L-me2Q2ERH8mkt6QlTx2lcHvQyp74bk7f_cFvBiLHufrsNeW_iPj5P0GNd3fnLmggILtk06BapL8YMMu14GNZfyvQXjNxvJG0Gz2cdNH9W6cU8NzALeDkY9QPvvxhOR6mjbpU_hxZFwXRbePkpW5MbXoghyU6_FGusV1kEszpfyopv-9Up3R0xGbdCRgCqYGUlJdpNIzWT-rFuOriFcHg-RXA"}]</headers>
                 <forceScAccepted>false</forceScAccepted>
                 <disableChunking>false</disableChunking>
                 <forceHttp10>false</forceHttp10>
                 <noKeepAlive>false</noKeepAlive>
-                <responseVariable>http_get_1</responseVariable>
-                <overwriteBody>true</overwriteBody>
+                <responseVariable>http_get_2</responseVariable>
+                <overwriteBody>false</overwriteBody>
             </http.get>
+
+
+
+
             <log category="INFO" logMessageID="true" logFullPayload="true" description="after get 1s backend">
                 <message>after get 1s backend thevar: ${vars.http_get_1}</message>
             </log><!--This is generated API skeleton.--><!--Business Logic Goes Here-->

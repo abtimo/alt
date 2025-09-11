@@ -1,0 +1,13 @@
+{
+  "type": "API",
+  "/1c/get-tt/{code}": {
+    "requests": [
+      {
+        "name": "req1",
+        "queryParams": {},
+        "pathParams": {}
+      }
+    ],
+    "defaultRequest": "req1"
+  }
+}

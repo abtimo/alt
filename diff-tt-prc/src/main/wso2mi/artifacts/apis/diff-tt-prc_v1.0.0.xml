@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<api xmlns="http://ws.apache.org/ns/synapse" name="diff-tt-prc" context="/default" version="1.0.0" version-type="context" publishSwagger="gov:mi-resources/api-definitions/diff-tt-prc.yaml">
+<api name="diff-tt-prc" context="/default" version="1.0.0" version-type="url" xmlns="http://ws.apache.org/ns/synapse">
     <resource methods="POST" url-mapping="/tt-check">
         <inSequence><!--This is generated API skeleton.--><!--Business Logic Goes Here-->
             <payloadFactory media-type="json">
@@ -51,7 +51,6 @@
                 <responseVariable>http_get_4</responseVariable>
                 <overwriteBody>true</overwriteBody>
             </http.get>
-
             <log category="INFO" logMessageID="true" logFullPayload="true" description="after third call ">
                 <message>after third call : ${vars.http_get_4}</message>
             </log>

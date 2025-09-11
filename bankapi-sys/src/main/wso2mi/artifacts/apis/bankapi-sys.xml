@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/bankapi-sys" name="bankapi-sys" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/">
+        <inSequence>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="before.https.get">
+                <message>before.https.get ${payload}&lt;br&gt;</message>
+            </log>
+            <http.get configKey="https-bankapi-direct">
+                <relativePath>/</relativePath>
+                <headers>[]</headers>
+                <forceScAccepted>false</forceScAccepted>
+                <disableChunking>false</disableChunking>
+                <forceHttp10>false</forceHttp10>
+                <noKeepAlive>false</noKeepAlive>
+                <responseVariable>http_get_1</responseVariable>
+                <overwriteBody>true</overwriteBody>
+            </http.get>
+            <log category="INFO" logMessageID="true" logFullPayload="true" description="after.https.get">
+                <message> after.https.get:${payload}</message>
+            </log>
+            <http.get configKey="https-get-wso2-api-m-apigw">
+                <relativePath>/</relativePath>
+                <headers>[{"Internal-Key":"eyJraWQiOiJnYXRld2F5X2NlcnRpZmljYXRlX2FsaWFzIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJhZG1pbkBjYXJib24uc3VwZXIiLCJhdWQiOiIzNTgwZTFiNy0xYjBjLTQ1MzEtYjcxYi0xYWNiZjEyMmQxZmMiLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo5NDQzL29hdXRoMi90b2tlbiIsImtleXR5cGUiOiJQUk9EVUNUSU9OIiwic3Vic2NyaWJlZEFQSXMiOlt7Im5hbWUiOiJCYW5rQVBJIiwiY29udGV4dCI6Ii9iYW5rYXBpLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjpudWxsLCJzdWJzY3JpYmVyVGVuYW50RG9tYWluIjpudWxsfV0sImV4cCI6MTc1NzYwNzQwNywidG9rZW5fdHlwZSI6IkludGVybmFsS2V5IiwiaWF0IjoxNzU3NTQ3NDA3LCJqdGkiOiIxZmU0ZDBlNi05ZGM4LTQwNDgtOGQ3Ny1iM2U0MTZkODk0OTgifQ.YtGU0Q0qaRYXiVlkLOQBOWwDlUVku4B7kMbGykXDVlYRgqwtz3tNWHazS2fhCNoKHQan-pPPY5sxvwemZz7gU3-tTE4bpUmTCBz7t47QALGY8dPChAxw_s_odMKzcPc1lynfLadgtdr_muP1tAIKZiu8QvTpqGGl6OOEFC5WxqEy0wKCGiMyTtCsjPIGrU75YkcNxOWQi0IcYKL5cs9Hv_L6vwKUGNn3TJJYm39evrh_fVv4Qqt2JwrTbcdxcXIcGFp-QzdTfqW1kn4ibf5LP8j1ck3RfrQBr425dSS5JehbZQ7anzoSjhnzM5GzZYS8xzIP7JRsXQXH3xn3oWdr4A"}]</headers>
+                <forceScAccepted>false</forceScAccepted>
+                <disableChunking>false</disableChunking>
+                <forceHttp10>false</forceHttp10>
+                <noKeepAlive>false</noKeepAlive>
+                <responseVariable>http_get_2</responseVariable>
+                <overwriteBody>true</overwriteBody>
+            </http.get>
+
+
+
+<log category="INFO" logMessageID="true" logFullPayload="true" description="after.https.get.bankapi.internalKey">
+                <message>after.https.get.bankapi.internalKey ${payload}</message>
+            </log>
+            <respond/>
+        </inSequence>
+        <faultSequence>
+        </faultSequence>
+    </resource>
+</api>

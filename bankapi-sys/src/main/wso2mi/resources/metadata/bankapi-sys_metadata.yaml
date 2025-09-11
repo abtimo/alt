@@ -1,0 +1,10 @@
+---
+key: "bankapi-sys-1.0.0"
+name : "bankapi-sys"
+displayName : "bankapi-sys"
+description: "bankapi-sys"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/bankapi-sys"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false

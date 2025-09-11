@@ -4,7 +4,7 @@ info:
   description: API Definition of diff-tt-prc
   version: 1.0.0
 servers:
-- url: http://localhost:8290/default
+- url: http://localhost:8290/default/1.0.0
 paths:
   /tt-check:
     post:

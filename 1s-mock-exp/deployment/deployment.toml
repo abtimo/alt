@@ -87,16 +87,6 @@ algorithm = "AES"
 # password = "root"
 # driver = "com.mysql.jdbc.Driver"
 
-[[datasource]]
-id = "WSO2CarbonDB"
-url= "jdbc:mysql://10.234.12.28:8083/mysql"
-username="root"
-password="root"
-driver="com.mysql.cj.jdbc.Driver"
-pool_options.maxActive=50
-pool_options.maxWait = 60000
-pool_options.testOnBorrow = true
-
 # [management_api]
 # protocols = "http"
 
@@ -139,3 +129,9 @@ pool_options.testOnBorrow = true
 # service_url = "https://localhost:8080/transactions/records"
 # service_username = "admin"
 # service_password = "admin"
+
+[dashboard_config]
+dashboard_url = "https://localhost:9743/dashboard/api/"
+
+
+
