@@ -114,9 +114,6 @@ algorithm = "AES"
 # [dashboard_config]
 # dashboard_url = "https://localhost:9743/dashboard/api/"
 
-[dashboard_config]
-dashboard_url = "https://localhost:9743/dashboard/api/"
-
 # [integration.transaction_counter]
 # enable = true
 # server_id = "MI_node_1"
@@ -132,7 +129,3 @@ dashboard_url = "https://localhost:9743/dashboard/api/"
 # service_url = "https://localhost:8080/transactions/records"
 # service_username = "admin"
 # service_password = "admin"
-
-
-[transport.http]
-sender.hostname_verifier = "AllowAll"

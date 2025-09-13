@@ -2,7 +2,7 @@
 <localEntry key="https-spike-mock" xmlns="http://ws.apache.org/ns/synapse">
   <http.init>
     <connectionType>HTTPS</connectionType>
-    <baseUrl>https://DESKTOP-ENPQQLP:8253/spike-sys</baseUrl>
+    <baseUrl>https://localhost:8253/spike-mock</baseUrl>
     <authType>None</authType>
     <timeoutAction>Never</timeoutAction>
     <retryCount>0</retryCount>
