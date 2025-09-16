@@ -8,9 +8,9 @@
             <log category="INFO" logMessageID="true" logFullPayload="true">
                 <message>${payload.spike}</message>
             </log>
-            <http.get configKey="https-spike-mock">
+            <http.get configKey="https-spike-mock-via-apim">
                 <relativePath>/</relativePath>
-                <headers>[]</headers>
+                <headers>[{"Internal-Key":"eyJraWQiOiJnYXRld2F5X2NlcnRpZmljYXRlX2FsaWFzIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJhZG1pbkBjYXJib24uc3VwZXIiLCJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0Ojk0NDNcL29hdXRoMlwvdG9rZW4iLCJrZXl0eXBlIjoiUFJPRFVDVElPTiIsInN1YnNjcmliZWRBUElzIjpbeyJzdWJzY3JpYmVyVGVuYW50RG9tYWluIjpudWxsLCJuYW1lIjoic3Bpa2UtbW9jayIsImNvbnRleHQiOiJcL3NwaWtlLW1vY2tcLzEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJ2ZXJzaW9uIjoiMS4wLjAiLCJzdWJzY3JpcHRpb25UaWVyIjpudWxsfV0sImV4cCI6MTc1Nzk2NzU0MSwidG9rZW5fdHlwZSI6IkludGVybmFsS2V5IiwiaWF0IjoxNzU3OTA3NTQxLCJqdGkiOiJjNmYzNWNmMy1hMWU4LTQ1M2YtOGY4NC02YmI0ODhhMzQ5N2YifQ.K1i_WgtXbrQ0aGGcXZgZtjml4OOFZmKQgJ-KDb_ptfxHnwJLMFyt_7pSjkDWvpA5kMIZYmA5pa8m7YR1c4yNuOpM9kM4WHnNCD0BZKEzT2xXFzIcflc7x1YOCIcDScIqJoTYVHHydXrTbbdu5fZRDmK2yiDsFkW4YSgLMEnCcJWsWWS7k2PgvgCU1OAUSvIfWX933Y7ZEJoZOIua8HKdPshB_DFqmpw_SvHWYzyk1sWFCTIn412Uggl3iiS1L_eR3sHkTttGehRSbRGFMhzu0kQv-JWAR2jBpAld58umeq4sZm19lLBbTjm7O9dUahMlsfdgJAa9zO-xOQqdcdWSJg"}]</headers>
                 <forceScAccepted>false</forceScAccepted>
                 <disableChunking>false</disableChunking>
                 <forceHttp10>false</forceHttp10>
@@ -18,6 +18,8 @@
                 <responseVariable>http_get_2</responseVariable>
                 <overwriteBody>true</overwriteBody>
             </http.get>
+
+
             <log category="INFO" logMessageID="true" logFullPayload="true" description="after.get.https">
                 <message> after.get.https ${payload}</message>
             </log>

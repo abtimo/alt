@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="https-spike-mock-via-apim" xmlns="http://ws.apache.org/ns/synapse">
+  <http.init>
+    <connectionType>HTTPS</connectionType>
+    <baseUrl>https://localhost:8243/spike-mock/1.0.0</baseUrl>
+    <authType>None</authType>
+    <timeoutAction>Never</timeoutAction>
+    <retryCount>0</retryCount>
+    <retryDelay>0</retryDelay>
+    <suspendInitialDuration>-1</suspendInitialDuration>
+    <suspendProgressionFactor>1</suspendProgressionFactor>
+    <name>https-spike-mock-via-apim</name>
+  </http.init>
+</localEntry>

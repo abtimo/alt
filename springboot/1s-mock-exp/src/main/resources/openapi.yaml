@@ -1,0 +1,48 @@
+openapi: 3.0.1
+info:
+  title: 1s-mock
+  description: API Definition of 1s-mock
+  version: 1.0.0
+servers:
+  - url: http://localhost:8290/1s
+paths:
+  /pos/{code}:
+    get:
+      parameters:
+        - name: code
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  kod_magazina:
+                    type: string
+                  naimenovanie:
+                    type: string
+                  format:
+                    type: string
+                  naimenovanie_regiona:
+                    type: string
+                  raion_okrug:
+                    type: string
+                  gorod:
+                    type: string
+                  adres:
+                    type: string
+                  typ_otkrytia:
+                    type: string
+                  etajnost:
+                    type: string
+                  filial:
+                    type: string
+                  okrug:
+                    type: string
+                  subformat:
+                    type: string
